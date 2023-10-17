@@ -5,8 +5,6 @@
   tasks :
   - name: updating my server using apt
     command: sudo apt update
-  - name: install docker using apt
-    command: sudo apt install docker.io -y
   - name: start docker service
     command: sudo systemctl start docker
   - name: run the banking application on test-server1
