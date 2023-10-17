@@ -13,7 +13,7 @@ provisioner "remote-exec" {
     inline = ["echo 'wait to start the instance' "]
 }
 provisioner "local-exec" {
-    command = " echo ${aws_instance.test-server1.public_ip} > inventory "
+    command = " echo ${aws_instance.test-server.public_ip} > inventory "
 }
 provisioner "remote-exec" {
     command = "ansible-playbook /var/lib/jenkins/workspace/Banking-project1/my-serverfiles/finance-playbook.yml"
