@@ -10,7 +10,7 @@ resource "aws_instance" "test-server" {
      host         = self.public_ip
 }
 provisioner "remote-exec" {
-    command = "echo 'wait to start the instance' "
+    inline = ["echo 'wait to start the instance' "]
 }
 provisioner "local-exec" {
     inline = " echo ${aws_instance.test-server1.public_ip} > inventory "
