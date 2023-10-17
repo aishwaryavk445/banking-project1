@@ -12,9 +12,6 @@ resource "aws_instance" "test-server" {
 provisioner "remote-exec" {
     command = "echo 'wait to start the instance' "
 }
-tags {
-  Name = "test-server"
-}
 provisioner "local-exec" {
     inline = " echo ${aws_instance.test-server1.public_ip} > inventory "
 }
