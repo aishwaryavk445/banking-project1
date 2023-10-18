@@ -10,4 +10,4 @@
   - name: start docker service
     command: sudo systemctl start docker
   - name: run the banking application on test-server
-    command: sudo docker run -dt -p 8084:8080 aishwaryavk445/banking-project:1.0
+    command: sudo docker run -dt -p 8084:8081 aishwaryavk445/banking-project:1.0
